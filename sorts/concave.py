@@ -27,9 +27,7 @@ def concave_sort (nums):
                 o_i+=half_size
             # If the left value is greater than the right --> swap them
             if (nums[i] > nums[o_i]):
-                value = nums[i]
-                nums[i] = nums[o_i]
-                nums[o_i] = value
+                helpers.swap(nums, i, o_i)
                 access+=4
             comps+=1
             access+=2

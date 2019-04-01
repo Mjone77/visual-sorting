@@ -6,10 +6,14 @@ _settings = {
     'MAX_ELEMENT_VALUE': 99999,     # Maximum value of the elements in the generated list
     'ENUM_LIST': True,              # True: Generate list with elements that equal their indexes then shuffle. Ignores min/max values. False: Generate list with random numbers between min and max.
     ### Sorts to perform ###
-    'DO_CONCAVE': True,             # Concave sort
-    'DO_QUICK': True,                # Quick sort
+    'DO_CONCAVE': False,             # Concave sort
+    'DO_QUICK': True,              # Quick sort
+    ### Sorting Attributes ###
+    'QUICK': {
+        'pivot_method': 'median'    # 'first', 'last', 'middle', or 'median' of the three
+    },
     ### Debug ###
-    'VERBOSE': False,                # Increases output
+    'VERBOSE': False,               # Increases output
 }
 
 def config(setting):

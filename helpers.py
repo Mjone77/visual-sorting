@@ -1,6 +1,13 @@
 import random
 import math
 
+""" Swaps the two indexes of the given array """
+def swap (nums, i1, i2):
+    value = nums[i1]
+    nums[i1] = nums[i2]
+    nums[i2] = value
+    return nums
+
 """ Shuffles a given list by randomly changing the index of elements
     Input: list to be shuffled
     Output: A shuffled list

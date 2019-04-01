@@ -14,14 +14,19 @@ def main ():
     # Concave sort
     if config('DO_CONCAVE'):
         concave_nums = sorts.concave(NUMS)
-        print("Concave Sort\nComparisons: "+str(concave_nums['comparisons'])+"\nAccesses: "+str(concave_nums['accesses'])+"\n"+str(concave_nums['sorted_list']))
-        print("Is it sorted? "+str(helpers.is_sorted(concave_nums['sorted_list'])))
+        print_list("Concave Sort", concave_nums)
 
     # Quick sort
     if config('DO_QUICK'):
-        pass
+        quick_nums = sorts.quick(NUMS)
+        print_list("Quick Sort", quick_nums)
 
     # <Insert other sort here>
+
+""" Prints a list with its comparison and access counters """
+def print_list (sort_name, nums_list):
+    print(sort_name+"\nComparisons: "+str(nums_list['comparisons'])+"\nAccesses: "+str(nums_list['accesses'])+"\n"+str(nums_list['sorted_list']))
+    print("Is it sorted? "+str(helpers.is_sorted(nums_list['sorted_list'])))
 
 if __name__ == '__main__':
     main()
